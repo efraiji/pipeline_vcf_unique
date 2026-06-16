@@ -1,0 +1,31 @@
+# =====================================================================
+# Configuration du pipeline vcf_unique
+# =====================================================================
+
+# --- Répertoires d'entrée / sortie ---
+vcf_dir: "/home/elenaf/links/projects/def-acheng/elenaf/results/poumon/mutect2/poumon_600017"
+# Chemin relatif au dossier du pipeline (= cwd de snakemake)
+results_dir: "results/poumon"
+
+# Suffixe attendu sur les VCFs d'entrée (pour les retrouver à partir du nom d'échantillon)
+# ex: <sample>.deepsomatic.PASS.vcf.gz
+vcf_suffix: ".mutect2.PASS.vcf"
+
+# --- Blacklists (hg38) ---
+blacklist_dir: "/home/elenaf/links/projects/def-acheng/resources/hg38/blacklists"
+blacklists:
+  - "centromeres.sorted.bed"
+  - "encode_blacklist_hg38_v2.bed"
+  - "simple_repeat_regions.sorted2.bed"
+
+# --- vcfanno ---
+vcfanno_bin: "/home/elenaf/links/projects/def-acheng/resources/software/vcfanno/vcfanno"
+vcfanno_toml: "/home/elenaf/links/projects/def-acheng/resources/hg38/blacklists/tomls/all_chr.toml"
+
+# --- Filtre gnomAD ---
+gnomad_af_max: "1e-5"
+
+# --- Modules à charger sur le cluster ---
+modules:
+  bedtools: "bedtools/2.31.0"
+  bcftools: "bcftools"
