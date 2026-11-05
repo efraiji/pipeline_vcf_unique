@@ -15,7 +15,7 @@ rule annotate:
         config["modules"]["bedtools"],
         config["modules"]["bcftools"],
     resources:
-        mem_mb  = 12000,
+        mem_mb  = 32000,
         runtime = 299,
         cpus_per_task = 2,
     shell:

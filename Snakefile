@@ -36,7 +36,8 @@ ANNOT_DIR      = f"{VCF_OUT_DIR}/annot"
 GNOMAD_DIR     = f"{ANNOT_DIR}/gnomad_filtered"
 
 # --- Inclusions des règles ---
-include: "workflow/rules/vcf2bed.smk"
+include: "workflow/rules/genpipes_filter.smk"
+# include: "workflow/rules/vcf2bed.smk"
 include: "workflow/rules/unique.smk"
 include: "workflow/rules/blacklist.smk"
 include: "workflow/rules/bed2vcf.smk"

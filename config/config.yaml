@@ -3,13 +3,13 @@
 # =====================================================================
 
 # --- Répertoires d'entrée / sortie ---
-vcf_dir: "/home/elenaf/links/projects/def-acheng/elenaf/results/poumon/mutect2/poumon_600017"
+vcf_dir: "/home/elenaf/links/projects/def-acheng/data/ORL/tumors_sharing/orl2_genpipes"
 # Chemin relatif au dossier du pipeline (= cwd de snakemake)
-results_dir: "results/poumon"
+results_dir: "results/orl2"
 
 # Suffixe attendu sur les VCFs d'entrée (pour les retrouver à partir du nom d'échantillon)
 # ex: <sample>.deepsomatic.PASS.vcf.gz
-vcf_suffix: ".mutect2.PASS.vcf"
+vcf_suffix: ".strelka2.PASS.vcf.gz"
 
 # --- Blacklists (hg38) ---
 blacklist_dir: "/home/elenaf/links/projects/def-acheng/resources/hg38/blacklists"
